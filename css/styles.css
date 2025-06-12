@@ -11057,41 +11057,43 @@ html {
   background-color: #1a252f;
 }
 
-#contactForm .my-3 {
-    display: flex;
-    flex-direction: row;
+.contact-form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 0 24px 0 rgba(44,62,80,0.08);
+}
+
+#contactForm .my-3.d-flex {
+    gap: 1rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
 }
 
 #contactForm .btn {
-    width: 100%;
-    max-width: 350px;
-    margin-left: 0;
-    margin-right: 0;
-    box-sizing: border-box;
-}
-
-#contactForm .form-label {
+    min-width: 180px;
+    max-width: 100%;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #141619;
-}
-#contactForm .form-check-label {
-    font-weight: 400;
+    letter-spacing: 1px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 
 @media (max-width: 768px) {
-    #contactForm .my-3 {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    .contact-form-wrapper {
+        padding: 1rem 0.5rem;
+    }
+    #contactForm .my-3.d-flex {
+        flex-direction: column !important;
+        gap: 0.75rem;
     }
     #contactForm .btn {
         width: 100%;
-        max-width: 350px;
+        min-width: 120px;
+        font-size: 1rem;
     }
 }

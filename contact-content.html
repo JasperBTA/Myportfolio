@@ -1,0 +1,60 @@
+<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+    <div class="contact-form-wrapper mx-auto" style="max-width: 500px;">
+        <div class="form-floating mb-3">
+            <input class="form-control" id="name" type="text" placeholder="Imię i Nazwisko" required />
+            <label for="name">Imię i Nazwisko</label>
+            <div class="invalid-feedback">Wymagane Imię i Nazwisko.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="email" type="email" placeholder="Adres Email" required />
+            <label for="email">Adres Email</label>
+            <div class="invalid-feedback">Wymagany Email.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="phone" type="tel" placeholder="Numer Telefonu" required />
+            <label for="phone">Numer Telefonu</label>
+            <div class="invalid-feedback">Wymagany Numer telefonu.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="message" placeholder="Wiadomość" style="height: 10rem" required></textarea>
+            <label for="message">Wiadomość</label>
+            <div class="invalid-feedback">Napisz czego potrzebujesz.</div>
+        </div>
+        <div class="mb-3">
+            <label for="topic" class="form-label">Wybierz temat</label>
+            <select class="form-select" id="topic" name="topic" required>
+                <option value="" selected disabled>Wybierz...</option>
+                <option value="wycena">Wycena projektu</option>
+                <option value="wspolpraca">Współpraca</option>
+                <option value="inne">Inne</option>
+            </select>
+            <div class="invalid-feedback">Wybierz temat wiadomości.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label d-block mb-2">Preferowana forma kontaktu</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="contactType" id="contactEmail" value="email" checked>
+                <label class="form-check-label" for="contactEmail">Email</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="contactType" id="contactPhone" value="phone">
+                <label class="form-check-label" for="contactPhone">Telefon</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="agreement" required>
+                <label class="form-check-label" for="agreement">
+                    Akceptuję politykę prywatności
+                </label>
+                <div class="invalid-feedback">Musisz zaakceptować politykę prywatności.</div>
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-center gap-3 flex-wrap flex-md-nowrap">
+            <button class="btn btn-primary btn-xl flex-fill" id="submitButton" type="submit">Wyślij</button>
+            <button class="btn btn-primary btn-xl flex-fill" id="showMessagesBtn" type="button">Wyświetl zapisane wiadomości</button>
+            <button class="btn btn-primary btn-xl flex-fill" id="clearMessagesBtn" type="button">Usuń wszystkie wiadomości</button>
+        </div>
+        <div id="messagesTable"></div>
+    </div>
+</form>
